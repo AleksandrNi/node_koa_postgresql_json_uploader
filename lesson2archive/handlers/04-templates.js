@@ -7,7 +7,7 @@ exports.init = app => app.use(async (ctx, next) => {
   ctx.render = function(templatePath, locals) {
     return pug.renderFile(
       path.join(config.get('templatesRoot'), templatePath),
-      Object.assign({}, ctx.locals, locals)
+      locals
     );
   };
 

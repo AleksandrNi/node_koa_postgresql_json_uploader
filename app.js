@@ -11,50 +11,27 @@ require('./handlers/03-logger').init(app);
 require('./handlers/04-templates').init(app);
 require('./handlers/05-errors').init(app);
 require('./handlers/06-session').init(app);
-/*require('./handlers/07-bodyParser').init(app);*/
+require('./handlers/07-bodyParser').init(app);
 
 
 const router = new Router();
 
+//make request to different url to receive not valid json
+//create valid json files from not valid json, result in.public/filtered
 router.get('/createjson', require(path.join(config.get('workersRoot'), '01downloadRawJson.js')).get, require('./routes/createJSON.js').get); // create JSON ready to upload to db
+
+//upload data into postgresql from json files
 router.get('/uploaddb', require(path.join(config.get('workersRoot'), '03createdbPostgresql.js')).get, require('./routes/uploaddb').get); // apload data from JSON to PostgreSQL
 
+//make request with custom params
 router.get('/', require('./routes/frontpage').get);
 
-/*
-router.get('/subscribe', async (ctx, next) => {
+// compile request from ctx.request.body to db and sendback answer 
+router.post('/query', require('./routes/query').post);
 
-  ctx.set('Cache-Control', 'no-cache,must-revalidate');
-  const message = await new Promise((resolve, reject) => {
-    clients.push(resolve);
+//update rows in db
+router.post('/update', require('./routes/update').post);
 
-    ctx.res.on('close', function() {
-      clients.splice(clients.indexOf(resolve), 1);
-      resolve();
-    });
-
-  });
-
-  ctx.body = message;
-
-});
-
-router.post('/publish', async (ctx, next) => {
-  const message = ctx.request.body.message;
-
-  if (!message) {
-    ctx.throw(400, 'required field `message` is missing');
-  }
-
-  clients.forEach(function(resolve) {
-    resolve(message);
-  });
-
-  clients = [];
-
-  ctx.body = 'ok';
-
-});*/
 
 app.use(router.routes());
 
