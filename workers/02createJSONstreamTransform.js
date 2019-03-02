@@ -1,11 +1,4 @@
 const stream = require('stream');
-/*const config = require('config');
-const inputJsonParams = config.get('inputJsonParams');
-const monthNames = config.get('monthNames');
-const bdJsonParams = config.get('bdJsonParams');
-const pick = require('lodash').pick;*/
-
-
 
 class AddLineNumberStream extends stream.Transform {
   constructor(options) {
@@ -28,10 +21,6 @@ class AddLineNumberStream extends stream.Transform {
 
     if( ~objEnd ) {
       str = str.slice(0, objEnd -1) + ']';
-
-/*      var obj = { first: 'someVal', second: 'otherVal' };
-      alert(Object.keys(obj)[0]); // returns first*/
-/*      let keys = Object.keys(jsFile[0].books);   */ 
       this.objBody = str;
     };
 

@@ -29,7 +29,7 @@ module.exports = {
   dbConfig: {
   user: 'postgres',
   host: 'localhost',
-  database: 'postgres',
+  database: 'koa_api',
   password: 'password', // По умолчанию пароля нет
   port: 5432, // Порт по умолчанию
 	},

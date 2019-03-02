@@ -1,5 +1,4 @@
 const fs = require('fs');
-const stream = require('stream');
 const path = require('path');
 const config = require('config');
 const rp = require('request-promise');

@@ -8,7 +8,6 @@ const names = config.get('names');
 const lastNames = config.get('lastNames');
 const bdJsonParams = config.get('bdJsonParams');
 const pick = require('lodash').pick;
-const rp = require('request-promise');
 
 exports.get = async function(ctx) {
 

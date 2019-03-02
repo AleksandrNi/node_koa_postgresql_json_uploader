@@ -1,7 +1,5 @@
-const Koa = require('koa');
-const {Pool} =require('pg');
 const config = require('config');
-const path = require('path');
+
 const bdJsonParams = config.get('bdJsonParams'); 
 const qp = config.get('qp'); 
 

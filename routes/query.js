@@ -14,6 +14,7 @@ exports.post = async function(ctx) {
 	let whereQuery;
 	let offsetValue = '';
 	let tempLimit;
+	ctx.session.queryParams = ctx.session.queryParams || {};
 
 	try {
 		const request = ctx.request.body;
