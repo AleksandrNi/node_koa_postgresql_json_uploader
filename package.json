@@ -13,7 +13,11 @@
     "start": "node index.js",
     "test": "node test.js"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "koa",
+    "postgresql"
+  ],
   "author": "AleksandrNi",
   "license": "ISC",
   "dependencies": {
@@ -25,12 +29,7 @@
     "request-promise": "^4.2.4"
   },
   "repository": {
-    "type":"git",
-    "url":"https://github.com/AleksandrNi/node_koa_postgresql_json_uploader"
-  },
-  "keywords": [
-    "node",
-    "koa",
-    "postgresql"
-  ],
+    "type": "git",
+    "url": "https://github.com/AleksandrNi/node_koa_postgresql_json_uploader"
+  }
 }
