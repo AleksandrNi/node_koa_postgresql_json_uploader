@@ -1,22 +1,36 @@
 {
-  "name": "lesson2",
+  "name": "node-koa2-postgresql-uploader",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node test.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "AleksandrNi",
   "license": "ISC",
   "dependencies": {
+    "koa": "^2.7.0",
     "lodash": "^4.17.11",
     "node-fetch": "^2.3.0",
     "pg": "^7.8.1",
     "request-progress": "^3.0.0",
     "request-promise": "^4.2.4"
-  }
+  },
+  "repository": {
+    "type":"git",
+    "url":"https://github.com/AleksandrNi/node_koa_postgresql_json_uploader"
+  },
+  "keywords": [
+    "node",
+    "koa",
+    "postgresql"
+  ],
 }

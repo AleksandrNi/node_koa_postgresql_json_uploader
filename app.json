@@ -1,0 +1,12 @@
+{
+  "name": "node-koa2-postgresql-uploader",
+  "description": "desc:node-koa2-postgresql-uploader",
+  "repository": "https://github.com/AleksandrNi/node_koa_postgresql_json_uploader",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": [
+    "node",
+    "koa",
+    "postgresql"
+  ],
+  "image": "heroku/nodejs"
+}
