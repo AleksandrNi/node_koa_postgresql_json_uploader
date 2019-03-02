@@ -35,10 +35,10 @@ module.exports = {
 	},
 
   dbConfigTest: {
-  user: 'postgres',
-  host: 'localhost',
-  database: 'koa_api',
-  password: 'password', // По умолчанию пароля нет
+  user: 'fmbgvretygpced' || 'postgres',
+  host: 'ec2-46-137-170-51.eu-west-1.compute.amazonaws.com' ||'localhost',
+  database: 'd7s0rt7hoktqrg' || 'koa_api',
+  password: '8bb8899bd98882c847f6c92002d348e91bd44d37dae40e3b4c145bbada80e006' || 'password', // По умолчанию пароля нет
   port: 5432, // Порт по умолчанию
   },
 

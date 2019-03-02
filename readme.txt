@@ -2,7 +2,7 @@
 
 How to:
 
-connect db => config/config.js
+connect db => config/default.js
 
 routes
 1. '/createjson'
